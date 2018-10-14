@@ -16,8 +16,14 @@ module.exports = {
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'config/typography.js',
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 };
