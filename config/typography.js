@@ -33,7 +33,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Montserrat',
-      styles: ['400', '400i', '700'],
+      styles: ['400', '400i', '500', '700'],
     },
   ],
   scaleRatio: 3.157,

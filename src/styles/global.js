@@ -13,6 +13,7 @@ injectGlobal`
   }
 
   html {
+    scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -28,6 +29,32 @@ injectGlobal`
   ::selection {
     color: ${theme.colors.textInvert};
     background-color: ${theme.colors.primary};
+  }
+
+  h2 {
+    color: ${theme.colors.primary};
+    text-transform: uppercase;
+  }
+
+  h3, h4 {
+    color: ${theme.colors.primary};
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  h5 {
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: ${theme.colors.greyMedium};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   a {
@@ -51,6 +78,24 @@ injectGlobal`
 
     &:focus {
       outline: 0;
+    }
+  }
+
+  @-webkit-keyframes love {
+    to {
+      -webkit-transform: scale(1.1);
+    }
+  }
+
+  @-moz-keyframes love {
+    to {
+      -moz-transform: scale(1.1);
+    }
+  }
+
+  @keyframes love {
+    to {
+      transform: scale(1.1);
     }
   }
 `;
