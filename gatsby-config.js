@@ -1,3 +1,13 @@
+require('dotenv').config();
+
+const { ACCESS_TOKEN, SPACE_ID } = process.env;
+
+if (!ACCESS_TOKEN || !SPACE_ID) {
+  throw new Error(
+    'Contentful spaceId and the delivery token need to be provided.'
+  );
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Miguel',
@@ -22,6 +32,13 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'config/typography.js',
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: SPACE_ID,
+        accessToken: ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-offline',
